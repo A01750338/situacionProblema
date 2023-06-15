@@ -18,18 +18,19 @@ class Video
         string fecha;
         int duracion;
         double calif;
+
+        double calN;
     public:
         Video(string id, string nombre, int duracion, string genero, double calif, string fecha);
-        void leerArchivo();
+        // void leerArchivo();
         string getID();
         string getNombre();
         string getGenero();
         string getFecha();
         int getDuracion();
         double getCalif();
-        void mostrarPeliculas();
-        void mostrarEp();
-        //void mostrarCal();
+        virtual void mostrarVideo() = 0;
+        void mostrarCal();
         virtual void calificar(double calN) = 0;
 
 };
