@@ -14,6 +14,7 @@ class Serie : public Video
     public:
         Serie(string id, string nombre, int duracion, string genero, double calif, string fecha,string idEp, string nombreEp, int temporada, int numEp);
         void mostrarVideo();
+        void calificar(double calN);
 };
 
 #endif

@@ -17,9 +17,14 @@ void Serie::mostrarVideo()
     cout << "Género: " << genero << endl;
     cout << "Fecha de estreno: " << fecha << endl;
     
-    cout << "ID Ep: " << id << endl;
+    cout << "ID Ep: " << idEp << endl;
     cout << "Temporada: " << temporada << endl;
     cout << "Episodio: " << numEp << endl;
     cout << "Nombre: " << nombreEp <<endl;
     cout << "Calificación: " << calif << endl;
+}
+
+void Serie::calificar(double calN)
+{
+    this->calN = calN;
 }
