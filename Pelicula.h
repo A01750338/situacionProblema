@@ -13,6 +13,7 @@ class Pelicula : public Video
     public:
         Pelicula(string id, string nombre, int duracion, string genero, double calif, string fecha);
         void mostrarVideo();
+        void calificar(double calN);
 };
 
 #endif

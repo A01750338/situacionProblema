@@ -19,3 +19,8 @@ void Pelicula::mostrarVideo()
     cout << "Calificación: " << calif << endl;
     cout << "Fecha de estreno: " << fecha << endl;
 }
+
+void Pelicula::calificar(double calN)
+{
+    this->calN = calN;
+}
