@@ -10,8 +10,10 @@ Pelicula::Pelicula(string id, string nombre, int duracion, string genero, double
 {
 }
 
-void Pelicula::mostrarVideo()
+void Pelicula::mostrarInfo()
 {
+    cout << endl << "\nPelícula: \n" << endl;
+    
     cout << "ID: " << id << endl;
     cout << "Nombre: "    << nombre << endl;
     cout << "Duracion: " << duracion << " minutos" << endl;
