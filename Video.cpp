@@ -26,36 +26,37 @@ Video::Video(string id, string nombre, int duracion, string genero, double calif
     */
 }
 
-/*void Video::leerArchivo()
-{
-
-}*/
-
+// Regresa el ID del video
 string Video::getID()
 {
     return id;
 }
 
+// Regresa el nombre del video
 string Video::getNombre()
 {
     return nombre;
 }
 
+// Rergresa la duración del video
 int Video::getDuracion()
 {
     return duracion;
 }
 
+// Regresa los géneros del video
 string Video::getGenero()
 {
     return genero;
 }
 
+// Regresa la calificación del video
 double Video::getCalif()
 {
     return calif;
 }
 
+// Regresa la fecha del video
 string Video::getFecha()
 {
     return fecha;

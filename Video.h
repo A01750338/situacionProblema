@@ -1,6 +1,6 @@
 /**
  * Autor: Min Che Kim
- * Clase Video 
+ * Define clase Video
 */
 
 #ifndef VIDEO_H
@@ -29,7 +29,7 @@ class Video
         string getFecha();
         int getDuracion();
         double getCalif();
-        virtual void mostrarVideo() = 0;
+        virtual void mostrarInfo() = 0;
         void mostrarCal();
         virtual void calificar(double calN) = 0;
 
