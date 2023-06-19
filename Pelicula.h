@@ -1,6 +1,6 @@
 /**
  * Autor: Min Che Kim
- * 
+ * Define clase Pelicula
 */
 
 #ifndef PELICULA_H

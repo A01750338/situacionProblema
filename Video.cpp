@@ -42,7 +42,7 @@ double Video::getCalif()
     return calif;
 }
 
-
+// Sobrecarga del operador de comparación <= para comparar una calificación (double) con un objeto Video.
 bool operator<=(double &calif, Video &video)
 {
     if (calif < video.getCalif() || calif == video.getCalif())

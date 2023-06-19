@@ -1,5 +1,10 @@
+/**
+ * Autor: Min Che Kim
+ * Implementacion de la clase Serie
+ */
 #include "Serie.h"
 
+// Constructor
 Serie::Serie(string id, string nombre, int duracion, string genero, double calif, string fecha, string idEp, string nombreEp, int temporada, int numEp)
 : Video(id,nombre,duracion,genero,calif,fecha)
 {
@@ -9,14 +14,16 @@ Serie::Serie(string id, string nombre, int duracion, string genero, double calif
     this->numEp = numEp;
 }
 
+// Regresa nombre del Episodio
 string Serie::getNombreEp()
 {
     return nombreEp;
 }
 
+// Función para mostrar la información general de la serie y el episodio
 void Serie::mostrarInfo()
 {
-    cout<< endl << "\nEpisodio: \n"<< endl;
+    cout<< endl << "\nSerie: \n"<< endl;
 
     cout << "ID: " << id << endl;
     cout << "Nombre: "    << nombre << endl;
@@ -31,6 +38,7 @@ void Serie::mostrarInfo()
     cout << "Calificación: " << calif << endl;  
 }
 
+// Función para mostrar la información específica del episodio
 void Serie::mostrarEp()
 {
     cout << "ID Ep: " << idEp << endl;
@@ -40,12 +48,14 @@ void Serie::mostrarEp()
     cout << "Calificación: " << calif << endl;  
 }
 
+// Función para calificar un episodio de la serie
 void Serie::calificar(double calN)
 {
     calif = calN;
     cout << "La nueva calificación de " << nombre << " del episodio " << numEp << " " << nombreEp <<" es: " << calif;
 }
 
+// Sobrecarga del operador '<<' para la clase Serie
 ostream &operator<<(ostream &output, Serie &serie)
 {
     output << "Calificación antigüa: " << serie.getCalif() << endl;

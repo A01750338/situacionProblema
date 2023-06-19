@@ -1,3 +1,7 @@
+/**
+ * Autor: Min Che Kim
+ * Define clase Serie
+ */
 #ifndef SERIE_H
 #define SERIE_H
 
