@@ -1,5 +1,5 @@
 /**
- * Autor: Min Che Kim
+ * Autor: Min Kim
  * Define clase Video
  */
 
