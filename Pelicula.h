@@ -14,6 +14,8 @@ class Pelicula : public Video
         Pelicula(string id, string nombre, int duracion, string genero, double calif, string fecha);
         void mostrarInfo();
         void calificar(double calN);
+        friend bool operator<=(double &calif, Pelicula &pelicula);
+        friend ostream &operator<<(ostream &output, Pelicula &pelicula);
 };
 
 #endif

@@ -9,6 +9,10 @@ Serie::Serie(string id, string nombre, int duracion, string genero, double calif
     this->numEp = numEp;
 }
 
+string Serie::getNombreEp()
+{
+    return nombreEp;
+}
 
 void Serie::mostrarInfo()
 {
@@ -20,7 +24,16 @@ void Serie::mostrarInfo()
     cout << "Género: " << genero << endl;
     cout << "Fecha de estreno: " << fecha << endl;
 
-        cout << "ID Ep: " << idEp << endl;
+    cout << "\nID Ep: " << idEp << endl;
+    cout << "Temporada: " << temporada << endl;
+    cout << "Episodio: " << numEp << endl;
+    cout << "Nombre: " << nombreEp <<endl;
+    cout << "Calificación: " << calif << endl;  
+}
+
+void Serie::mostrarEp()
+{
+    cout << "ID Ep: " << idEp << endl;
     cout << "Temporada: " << temporada << endl;
     cout << "Episodio: " << numEp << endl;
     cout << "Nombre: " << nombreEp <<endl;
@@ -29,5 +42,12 @@ void Serie::mostrarInfo()
 
 void Serie::calificar(double calN)
 {
-    this->calN = calN;
+    calif = calN;
+    cout << "La nueva calificación de " << nombre << " del episodio " << numEp << " " << nombreEp <<" es: " << calif;
+}
+
+ostream &operator<<(ostream &output, Serie &serie)
+{
+    output << "Calificación antigüa: " << serie.getCalif() << endl;
+    return output;
 }

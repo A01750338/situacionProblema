@@ -16,14 +16,6 @@ using namespace std;
 Video::Video(string id, string nombre, int duracion, string genero, double calif, string fecha)
 : id(id), nombre(nombre), duracion(duracion), genero(genero),calif(calif),fecha(fecha)
 {
-    /*
-    this->id = id;
-    this->nombre = nombre;
-    this->duracion = duracion;
-    this->genero = genero;
-    this->calif = calif;
-    this->fecha = fecha;
-    */
 }
 
 // Regresa el ID del video
@@ -38,12 +30,6 @@ string Video::getNombre()
     return nombre;
 }
 
-// Rergresa la duración del video
-int Video::getDuracion()
-{
-    return duracion;
-}
-
 // Regresa los géneros del video
 string Video::getGenero()
 {
@@ -56,19 +42,16 @@ double Video::getCalif()
     return calif;
 }
 
-// Regresa la fecha del video
-string Video::getFecha()
+
+bool operator<=(double &calif, Video &video)
 {
-    return fecha;
+    if (calif < video.getCalif() || calif == video.getCalif())
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
-/*void Video::mostrarEp()
-{
-}*/
-
-/*
-void Video::mostrarCal()
-{
-
-}
-*/

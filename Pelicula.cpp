@@ -13,7 +13,7 @@ Pelicula::Pelicula(string id, string nombre, int duracion, string genero, double
 void Pelicula::mostrarInfo()
 {
     cout << endl << "\nPelícula: \n" << endl;
-    
+
     cout << "ID: " << id << endl;
     cout << "Nombre: "    << nombre << endl;
     cout << "Duracion: " << duracion << " minutos" << endl;
@@ -24,5 +24,24 @@ void Pelicula::mostrarInfo()
 
 void Pelicula::calificar(double calN)
 {
-    this->calN = calN;
+    calif = calN;
+    cout << "La nueva calificación de " + nombre + " es: " << calif << endl;
+}
+
+bool operator<=(double &calif, Pelicula &pelicula)
+{
+    if (calif < pelicula.getCalif() || calif == pelicula.getCalif())
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+ostream &operator<<(ostream &output, Pelicula &pelicula)
+{
+    output << "Calificación antigüa: " << pelicula.getCalif() << endl;
+    return output;
 }
